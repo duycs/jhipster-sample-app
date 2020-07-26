@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "module": "esnext",
+    "target": "es5",
+    "module": "commonjs",
     "moduleResolution": "node",
     "sourceMap": true,
     "emitDecoratorMetadata": true,
@@ -20,12 +20,18 @@
     "importHelpers": true,
     "downlevelIteration": true,
     "declaration": false,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "typeRoots": ["./types", "./node_modules/@types"],
+    "noImplicitAny": false
   },
   "angularCompilerOptions": {
     "strictInjectionParameters": true,
     "fullTemplateTypeCheck": true,
     "strictTemplates": true,
-    "preserveWhitespaces": true
-  }
+    "preserveWhitespaces": true,
+    "noImplicitAny": false
+  },
+  "noImplicitAny": false,
+  "include": ["src/main/webapp/app", "src/test/javascript/"],
+  "exclude": ["node_modules"]
 }
